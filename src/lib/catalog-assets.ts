@@ -25,15 +25,20 @@ export function catalogFileName(input: string) {
 
 export async function importPreparedCatalogAssets({
   root = process.cwd(),
-  prisma = new PrismaClient()
+  prisma = new PrismaClient(),
+  offset = 0,
+  limit
 }: {
   root?: string;
   prisma?: PrismaClient;
+  offset?: number;
+  limit?: number;
 } = {}) {
   const media = readMediaLibrary(root);
+  const selected = media.slice(offset, limit ? offset + limit : undefined);
   const supabase = await ensurePublicCatalogBucket();
   let uploaded = 0;
-  for (const item of media) {
+  for (const item of selected) {
     const fileName = catalogFileName(item.file);
     const localPath = path.join(root, catalogDir, fileName);
     if (!fs.existsSync(localPath)) continue;
@@ -55,5 +60,5 @@ export async function importPreparedCatalogAssets({
     });
     uploaded += 1;
   }
-  return { uploaded, total: media.length, bucket: catalogAssetBucket };
+  return { uploaded, total: media.length, offset, limit: limit ?? null, processed: selected.length, bucket: catalogAssetBucket };
 }
