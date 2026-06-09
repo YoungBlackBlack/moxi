@@ -50,6 +50,10 @@ a {
   padding: 28px 0 48px;
 }
 
+.narrow {
+  width: min(520px, calc(100vw - 36px));
+}
+
 .hero {
   display: grid;
   gap: 14px;
@@ -172,6 +176,33 @@ textarea {
   padding-bottom: 8px;
 }
 
+.admin-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.2fr) minmax(120px, 0.5fr);
+  gap: 12px;
+  border-bottom: 1px solid #edf0f3;
+  padding-bottom: 14px;
+}
+
+.inline-form,
+.toolbar {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(120px, 1fr) auto;
+  gap: 8px;
+  align-items: end;
+}
+
+.toolbar {
+  margin-bottom: 16px;
+}
+
+.mono {
+  color: #667085;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
 @media (max-width: 760px) {
   .split {
     grid-template-columns: 1fr;
@@ -182,6 +213,12 @@ textarea {
     align-items: flex-start;
     gap: 8px;
     flex-direction: column;
+  }
+
+  .admin-row,
+  .inline-form,
+  .toolbar {
+    grid-template-columns: 1fr;
   }
 
   .hero h1 {

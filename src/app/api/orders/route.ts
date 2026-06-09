@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getCurrentUser } from "@/lib/auth";
 import { createOrderSchema } from "@/lib/validation";
 import { orderService } from "@/server/order.service";
 
@@ -21,7 +22,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: payload.error.flatten() }, { status: 400 });
   }
 
-  const order = await orderService.create(payload.data);
+  const user = await getCurrentUser();
+  const order = await orderService.create({ ...payload.data, userId: user?.id });
 
   if (!contentType.includes("application/json")) {
     return NextResponse.redirect(new URL(`/orders/${order.id}`, request.url), 303);

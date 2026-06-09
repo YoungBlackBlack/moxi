@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { requireAdmin } from "@/lib/auth";
 import { orderStatusLabels } from "@/lib/order-status";
 import { prisma } from "@/lib/prisma";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
+  const admin = await requireAdmin();
   const [orders, categories, assets] = await Promise.all([
     prisma.order.findMany({
       orderBy: { createdAt: "desc" },
@@ -19,7 +21,11 @@ export default async function AdminPage() {
     <main className="shell">
       <header className="topbar">
         <div className="brand">管理员后台</div>
-        <Link href="/">返回首页</Link>
+        <nav className="nav">
+          <span>{admin.displayName || admin.phone}</span>
+          <Link href="/assets">素材库</Link>
+          <Link href="/">返回首页</Link>
+        </nav>
       </header>
       <section className="page">
         <div className="hero">
@@ -31,17 +37,33 @@ export default async function AdminPage() {
           <h2>最近订单</h2>
           <div className="list">
             {orders.map((order) => (
-              <div className="row" key={order.id}>
+              <div className="admin-row" key={order.id}>
                 <div>
-                  <strong>{order.orderNo}</strong>
+                  <Link href={`/orders/${order.id}`}><strong>{order.orderNo}</strong></Link>
                   <div className="muted">
                     {order.category.name} / {order.quantity} / {order.recipientName}
                   </div>
+                  <div className="muted">文件 {order.files.length} 个 / 发货 {order.shipments.length} 条</div>
                 </div>
                 <div>
                   <strong>{orderStatusLabels[order.status]}</strong>
                   <div className="muted">{order.finalAmount ? `¥${order.finalAmount}` : "待报价"}</div>
                 </div>
+                <form className="inline-form" action={`/api/admin/orders/${order.id}/quote`} method="post">
+                  <input name="amount" type="number" step="0.01" placeholder="人工报价" />
+                  <input name="note" placeholder="备注" />
+                  <button className="button secondary" type="submit">报价</button>
+                </form>
+                <form className="inline-form" action={`/api/admin/orders/${order.id}/payment`} method="post">
+                  <input name="amount" type="number" step="0.01" defaultValue={order.finalAmount?.toString()} placeholder="付款金额" />
+                  <input name="method" defaultValue="offline" />
+                  <button className="button secondary" type="submit">确认付款</button>
+                </form>
+                <form className="inline-form" action={`/api/admin/orders/${order.id}/shipment`} method="post">
+                  <input name="carrier" placeholder="快递" />
+                  <input name="trackingNo" placeholder="单号" />
+                  <button className="button secondary" type="submit">发货</button>
+                </form>
               </div>
             ))}
             {orders.length === 0 ? <p className="muted">暂无订单。</p> : null}

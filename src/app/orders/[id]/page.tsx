@@ -52,6 +52,23 @@ export default async function OrderDetailPage({ params }: { params: Promise<{ id
               ? "管理员会补充报价，确认后进入付款。"
               : "请按线下付款说明付款，管理员确认后会推进生产。"}
           </p>
+          <form className="form" action={`/api/orders/${order.id}/files`} method="post" encType="multipart/form-data">
+            <div className="field">
+              <label htmlFor="file">上传交稿文件</label>
+              <input id="file" name="file" type="file" required />
+            </div>
+            <button className="button" type="submit">上传文件</button>
+          </form>
+          <div className="list">
+            <h3>已上传文件</h3>
+            {order.files.map((file) => (
+              <div className="row" key={file.id}>
+                <a href={file.url} target="_blank" rel="noreferrer">{file.originalName}</a>
+                <span className="muted">{Math.round(file.size / 1024)} KB</span>
+              </div>
+            ))}
+            {order.files.length === 0 ? <p className="muted">还没有上传文件。</p> : null}
+          </div>
         </aside>
       </section>
     </main>

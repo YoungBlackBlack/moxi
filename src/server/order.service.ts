@@ -17,6 +17,7 @@ export class OrderService {
     address: string;
     qq?: string;
     customerNote?: string;
+    userId?: string;
   }) {
     const quote = await quoteService.calculate(input);
     const orderNo = `MX${Date.now().toString(36).toUpperCase()}`;
@@ -25,6 +26,7 @@ export class OrderService {
     return prisma.order.create({
       data: {
         orderNo,
+        userId: input.userId,
         categoryId: input.categoryId,
         status,
         recipientName: input.recipientName,
@@ -94,6 +96,83 @@ export class OrderService {
           create: {
             title: "订单状态已更新",
             body: `订单状态已更新为 ${status}`
+          }
+        }
+      },
+      include: { category: true, files: true, payments: true, shipments: true, customQuote: true }
+    });
+  }
+
+  async setManualQuote(orderId: string, amount: number, note?: string) {
+    return prisma.order.update({
+      where: { id: orderId },
+      data: {
+        status: "QUOTED",
+        quotedAmount: new Prisma.Decimal(amount),
+        finalAmount: new Prisma.Decimal(amount),
+        adminNote: note,
+        customQuote: {
+          upsert: {
+            create: {
+              reason: "管理员人工报价",
+              amount: new Prisma.Decimal(amount),
+              note
+            },
+            update: {
+              amount: new Prisma.Decimal(amount),
+              note
+            }
+          }
+        },
+        notifications: {
+          create: {
+            title: "管理员已报价",
+            body: `订单人工报价为 ¥${amount}`
+          }
+        }
+      },
+      include: { category: true, files: true, payments: true, shipments: true, customQuote: true }
+    });
+  }
+
+  async confirmPayment(orderId: string, amount: number, method: string, note?: string) {
+    return prisma.order.update({
+      where: { id: orderId },
+      data: {
+        status: "PAID",
+        payments: {
+          create: {
+            amount: new Prisma.Decimal(amount),
+            method,
+            note
+          }
+        },
+        notifications: {
+          create: {
+            title: "付款已确认",
+            body: `管理员已确认收到 ¥${amount}`
+          }
+        }
+      },
+      include: { category: true, files: true, payments: true, shipments: true, customQuote: true }
+    });
+  }
+
+  async addShipment(orderId: string, carrier: string, trackingNo: string) {
+    return prisma.order.update({
+      where: { id: orderId },
+      data: {
+        status: "SHIPPED",
+        shipments: {
+          create: {
+            carrier,
+            trackingNo
+          }
+        },
+        notifications: {
+          create: {
+            title: "订单已发货",
+            body: `${carrier} ${trackingNo}`
           }
         }
       },

@@ -150,7 +150,7 @@ function numeric(value: string | undefined) {
   return parsed;
 }
 
-async function main() {
+export async function seedDatabase() {
   const workbook = readJson<WorkbookSheet[]>("extracted/metadata/workbook_summary.json");
   const media = readJson<MediaLibraryItem[]>("extracted/metadata/media_library.json");
   const secondaryPages = readJson<SecondaryPage[]>("extracted/metadata/secondary_pages.json");
@@ -260,14 +260,22 @@ async function main() {
     }
   });
 
-  console.log(`Seeded ${categorySheets.length} categories, ${secondaryPages.length} references, ${media.length} assets.`);
+  const result = {
+    categories: categorySheets.length,
+    references: secondaryPages.length,
+    assets: media.length
+  };
+  console.log(`Seeded ${result.categories} categories, ${result.references} references, ${result.assets} assets.`);
+  return result;
 }
 
-main()
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+if (process.argv[1]?.endsWith("seed.ts")) {
+  seedDatabase()
+    .catch((error) => {
+      console.error(error);
+      process.exit(1);
+    })
+    .finally(async () => {
+      await prisma.$disconnect();
+    });
+}

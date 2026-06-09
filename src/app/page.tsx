@@ -15,7 +15,9 @@ export default async function HomePage() {
         <div className="brand">Moxi 定制下单</div>
         <nav className="nav">
           <Link href="/order">开始下单</Link>
+          <Link href="/assets">素材库</Link>
           <Link href="/admin">管理员后台</Link>
+          <Link href="/login">登录</Link>
           <Link href="/api/health">健康检查</Link>
         </nav>
       </header>
