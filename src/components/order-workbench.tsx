@@ -99,6 +99,24 @@ function shortRule(text?: string) {
   return text.length > 72 ? `${text.slice(0, 72)}...` : text;
 }
 
+function uniqueQuickRules(items: Array<string | null>) {
+  const fallback = [
+    "文件名建议包含：制品名称、QQ、尺寸、数量。",
+    "交稿时请同时写清地址、备注和特殊工艺要求。",
+    "印刷文件请优先使用 CMYK，并按工艺要求准备白墨/烫色层。",
+    "文件不规范、色差和工艺容差按下单须知与售后条款处理。"
+  ];
+  const result: string[] = [];
+  for (const item of [...items, ...fallback]) {
+    if (!item) continue;
+    const key = normalize(item).slice(0, 48);
+    if (result.some((existing) => normalize(existing).slice(0, 48) === key)) continue;
+    result.push(item);
+    if (result.length === 4) break;
+  }
+  return result;
+}
+
 export function OrderWorkbench({
   categories,
   assets,
@@ -127,12 +145,12 @@ export function OrderWorkbench({
     return <div className="empty-state">还没有导入品类数据，请先运行 seed。</div>;
   }
 
-  const quickRules = [
+  const quickRules = uniqueQuickRules([
     shortRule(selected.rules.naming) ?? "文件名建议包含：制品名称、QQ、尺寸、数量。",
     shortRule(selected.rules.email) ?? "交稿时请同时写清地址、备注和特殊工艺要求。",
     shortRule(selected.rules.color) ?? "印刷文件请优先使用 CMYK，并按工艺要求准备白墨/烫色层。",
     shortRule(selected.rules.afterSale) ?? "文件不规范、色差和工艺容差按下单须知与售后条款处理。"
-  ];
+  ]);
 
   return (
     <div className="work-grid order-workbench">
