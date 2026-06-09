@@ -1,0 +1,101 @@
+[
+  {
+    "sheet": "汇总表",
+    "sheetId": "1",
+    "xlsx_path": "xl/worksheets/sheet1.xml",
+    "rows": 25,
+    "columns": 11,
+    "nonempty_cells": 47,
+    "csv": "extracted/csv/汇总表.csv"
+  },
+  {
+    "sheet": "吧唧（uv",
+    "sheetId": "2",
+    "xlsx_path": "xl/worksheets/sheet2.xml",
+    "rows": 46,
+    "columns": 5,
+    "nonempty_cells": 43,
+    "csv": "extracted/csv/吧唧（uv.csv"
+  },
+  {
+    "sheet": "吧唧（柯）",
+    "sheetId": "3",
+    "xlsx_path": "xl/worksheets/sheet3.xml",
+    "rows": 46,
+    "columns": 11,
+    "nonempty_cells": 170,
+    "csv": "extracted/csv/吧唧（柯）.csv"
+  },
+  {
+    "sheet": "亚克力制品",
+    "sheetId": "4",
+    "xlsx_path": "xl/worksheets/sheet4.xml",
+    "rows": 74,
+    "columns": 15,
+    "nonempty_cells": 351,
+    "csv": "extracted/csv/亚克力制品.csv"
+  },
+  {
+    "sheet": "普通厚亚克力&贝母麻将",
+    "sheetId": "5",
+    "xlsx_path": "xl/worksheets/sheet5.xml",
+    "rows": 66,
+    "columns": 13,
+    "nonempty_cells": 352,
+    "csv": "extracted/csv/普通厚亚克力&贝母麻将.csv"
+  },
+  {
+    "sheet": "durst印亚克力",
+    "sheetId": "6",
+    "xlsx_path": "xl/worksheets/sheet6.xml",
+    "rows": 51,
+    "columns": 10,
+    "nonempty_cells": 161,
+    "csv": "extracted/csv/durst印亚克力.csv"
+  },
+  {
+    "sheet": "冷烫亚克力",
+    "sheetId": "7",
+    "xlsx_path": "xl/worksheets/sheet7.xml",
+    "rows": 83,
+    "columns": 23,
+    "nonempty_cells": 366,
+    "csv": "extracted/csv/冷烫亚克力.csv"
+  },
+  {
+    "sheet": "冷烫双闪吧唧（表印）",
+    "sheetId": "8",
+    "xlsx_path": "xl/worksheets/sheet8.xml",
+    "rows": 48,
+    "columns": 10,
+    "nonempty_cells": 186,
+    "csv": "extracted/csv/冷烫双闪吧唧（表印）.csv"
+  },
+  {
+    "sheet": "贝壳光pet透卡",
+    "sheetId": "9",
+    "xlsx_path": "xl/worksheets/sheet9.xml",
+    "rows": 50,
+    "columns": 16,
+    "nonempty_cells": 138,
+    "csv": "extracted/csv/贝壳光pet透卡.csv"
+  },
+  {
+    "sheet": "折扇",
+    "sheetId": "10",
+    "xlsx_path": "xl/worksheets/sheet10.xml",
+    "rows": 23,
+    "columns": 10,
+    "nonempty_cells": 66,
+    "csv": "extracted/csv/折扇.csv"
+  },
+  {
+    "sheet": "鼠标垫",
+    "sheetId": "11",
+    "xlsx_path": "xl/worksheets/sheet11.xml",
+    "rows": 15,
+    "columns": 9,
+    "nonempty_cells": 30,
+    "csv": "extracted/csv/鼠标垫.csv"
+  }
+]

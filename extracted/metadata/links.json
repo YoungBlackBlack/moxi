@@ -1,0 +1,461 @@
+[
+  {
+    "sheet": "汇总表",
+    "ref": "B1",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "https://docs.qq.com/doc/DQkJIWUVOcGFDb2Rv"
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "B7",
+    "display": null,
+    "location": "'吧唧（uv'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "C7",
+    "display": null,
+    "location": "'亚克力制品'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "D7",
+    "display": null,
+    "location": "'durst印亚克力'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "E7",
+    "display": null,
+    "location": "'折扇'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "F7",
+    "display": null,
+    "location": "'鼠标垫'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "B11",
+    "display": null,
+    "location": "'吧唧（柯）'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "C11",
+    "display": null,
+    "location": "'冷烫亚克力'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "D11",
+    "display": null,
+    "location": "'贝壳光pet透卡'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "E11",
+    "display": null,
+    "location": "'冷烫双闪吧唧（表印）'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "F11",
+    "display": null,
+    "location": "'普通厚亚克力&贝母麻将'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "B20",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "https://docs.qq.com/sheet/DSWtOY0h5cEF4Ym5Z?tab=bh0hhn"
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "D20",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId2",
+    "target": "https://docs.qq.com/sheet/DSWF4b3dOcUJ2cVVm?tab=fbhqzh"
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "B24",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId3",
+    "target": "https://docs.qq.com/sheet/DQmNic0Vzb3ZKeXZX?tab=BB08J2"
+  },
+  {
+    "sheet": "汇总表",
+    "ref": "C24",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId4",
+    "target": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2"
+  },
+  {
+    "sheet": "吧唧（uv",
+    "ref": "A1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "吧唧（uv",
+    "ref": "A2",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "https://docs.qq.com/doc/DQm5GTWVhTG5jV1BP"
+  },
+  {
+    "sheet": "吧唧（uv",
+    "ref": "A5",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "mailto:3988091741@qq.com"
+  },
+  {
+    "sheet": "吧唧（uv",
+    "ref": "E6",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId2",
+    "target": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2"
+  },
+  {
+    "sheet": "吧唧（uv",
+    "ref": "A8",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "mailto:3988091741@qq.com"
+  },
+  {
+    "sheet": "吧唧（柯）",
+    "ref": "B1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "吧唧（柯）",
+    "ref": "B5",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "mailto:3988091741@qq.com"
+  },
+  {
+    "sheet": "吧唧（柯）",
+    "ref": "H8",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2"
+  },
+  {
+    "sheet": "吧唧（柯）",
+    "ref": "I8",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId2",
+    "target": "https://docs.qq.com/sheet/DSWFTTktzZXdkUVRj?tab=BB08J2"
+  },
+  {
+    "sheet": "亚克力制品",
+    "ref": "A1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "亚克力制品",
+    "ref": "A4",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "mailto:2785972877@qq.com"
+  },
+  {
+    "sheet": "亚克力制品",
+    "ref": "A5",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "mailto:2785972877@qq.com"
+  },
+  {
+    "sheet": "亚克力制品",
+    "ref": "D8",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "https://docs.qq.com/sheet/DSWxPUmhPaURLZmRt?tab=BB08J2"
+  },
+  {
+    "sheet": "亚克力制品",
+    "ref": "G36",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId2",
+    "target": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2"
+  },
+  {
+    "sheet": "普通厚亚克力&贝母麻将",
+    "ref": "A1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "普通厚亚克力&贝母麻将",
+    "ref": "A6",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "mailto:2785972877@qq.com"
+  },
+  {
+    "sheet": "普通厚亚克力&贝母麻将",
+    "ref": "A7",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "mailto:2785972877@qq.com"
+  },
+  {
+    "sheet": "普通厚亚克力&贝母麻将",
+    "ref": "A8",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "mailto:3988091741@qq.com"
+  },
+  {
+    "sheet": "durst印亚克力",
+    "ref": "B1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "durst印亚克力",
+    "ref": "H19",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "https://docs.qq.com/doc/DQk1oc2FWbUNCZmZs"
+  },
+  {
+    "sheet": "durst印亚克力",
+    "ref": "F20",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2"
+  },
+  {
+    "sheet": "冷烫亚克力",
+    "ref": "B1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "冷烫亚克力",
+    "ref": "M4",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2"
+  },
+  {
+    "sheet": "冷烫亚克力",
+    "ref": "B5",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "mailto:2785972877@qq.com"
+  },
+  {
+    "sheet": "冷烫亚克力",
+    "ref": "B6",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "mailto:2785972877@qq.com"
+  },
+  {
+    "sheet": "冷烫亚克力",
+    "ref": "E18",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId2",
+    "target": "https://docs.qq.com/doc/DQk1oc2FWbUNCZmZs"
+  },
+  {
+    "sheet": "冷烫亚克力",
+    "ref": "L18",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId2",
+    "target": "https://docs.qq.com/doc/DQk1oc2FWbUNCZmZs"
+  },
+  {
+    "sheet": "冷烫双闪吧唧（表印）",
+    "ref": "B1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "冷烫双闪吧唧（表印）",
+    "ref": "I7",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "https://docs.qq.com/doc/DQm5GTWVhTG5jV1BP"
+  },
+  {
+    "sheet": "冷烫双闪吧唧（表印）",
+    "ref": "I12",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId1",
+    "target": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2"
+  },
+  {
+    "sheet": "贝壳光pet透卡",
+    "ref": "B1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "贝壳光pet透卡",
+    "ref": "M15",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "https://docs.qq.com/doc/DQkVUU05qZGNxeHdB"
+  },
+  {
+    "sheet": "折扇",
+    "ref": "A1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "折扇",
+    "ref": "A4",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "mailto:3810130298@qq.com"
+  },
+  {
+    "sheet": "鼠标垫",
+    "ref": "A1",
+    "display": null,
+    "location": "'汇总表'!A1",
+    "tooltip": null,
+    "rid": null,
+    "target": null
+  },
+  {
+    "sheet": "鼠标垫",
+    "ref": "A4",
+    "display": null,
+    "location": null,
+    "tooltip": null,
+    "rid": "rId0",
+    "target": "mailto:3810130298@qq.com"
+  }
+]

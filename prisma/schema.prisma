@@ -1,0 +1,218 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+enum UserRole {
+  CUSTOMER
+  ADMIN
+}
+
+enum OrderStatus {
+  DRAFT
+  SUBMITTED
+  NEEDS_QUOTE
+  QUOTED
+  PENDING_PAYMENT
+  PAID
+  IN_REVIEW
+  IN_PRODUCTION
+  SHIPPED
+  COMPLETED
+  CANCELLED
+  AFTER_SALES
+}
+
+enum ProductionMode {
+  SINGLE
+  CARPOOL
+}
+
+enum AssetKind {
+  MAIN_EXCEL_IMAGE
+  SECONDARY_PAGE_SCREENSHOT
+  DOC_SCROLL_SCREENSHOT
+  SECONDARY_PAGE_ASSET
+}
+
+model User {
+  id           String     @id @default(cuid())
+  phone        String     @unique
+  qq           String?
+  displayName  String?
+  passwordHash String
+  role         UserRole   @default(CUSTOMER)
+  orders       Order[]
+  auditLogs    AuditLog[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+model Category {
+  id              String           @id @default(cuid())
+  name            String           @unique
+  slug            String           @unique
+  mode            ProductionMode
+  description     String
+  defaultLeadTime String?
+  enabled         Boolean          @default(true)
+  sourceCsv       String?
+  sortOrder       Int              @default(0)
+  priceRules      PriceRule[]
+  submissionRules SubmissionRule[]
+  orders          Order[]
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+}
+
+model PriceRule {
+  id           String   @id @default(cuid())
+  categoryId   String
+  category     Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  label        String
+  size         String?
+  craft        String?
+  quantityMin  Int?
+  quantityMax  Int?
+  unitPrice    Decimal? @db.Decimal(10, 2)
+  samplePrice  Decimal? @db.Decimal(10, 2)
+  minQuantity  Int?
+  leadTime     String?
+  rawRow       Json
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SubmissionRule {
+  id          String   @id @default(cuid())
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  title       String
+  body        String
+  email       String?
+  filePattern String?
+  raw         Json
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model MediaAsset {
+  id        String    @id @default(cuid())
+  kind      AssetKind
+  label     String
+  source    String
+  filePath  String
+  size      Int
+  ocrText   String?
+  tags      String[]  @default([])
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model ExternalReference {
+  id          String   @id @default(cuid())
+  title       String
+  url         String   @unique
+  kind        String
+  localDir    String?
+  assetCount  Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Order {
+  id             String       @id @default(cuid())
+  orderNo        String       @unique
+  userId         String?
+  user           User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
+  categoryId     String
+  category       Category     @relation(fields: [categoryId], references: [id])
+  status         OrderStatus  @default(SUBMITTED)
+  recipientName  String
+  recipientPhone String
+  address        String
+  qq             String?
+  quantity       Int
+  size           String?
+  craftOptions   Json
+  quotedAmount   Decimal?     @db.Decimal(10, 2)
+  finalAmount    Decimal?     @db.Decimal(10, 2)
+  customerNote   String?
+  adminNote      String?
+  files          OrderFile[]
+  payments       Payment[]
+  shipments      Shipment[]
+  customQuote    CustomQuote?
+  notifications  Notification[]
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model OrderFile {
+  id           String   @id @default(cuid())
+  orderId      String
+  order        Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  originalName String
+  url          String
+  size         Int
+  mimeType     String?
+  validation   Json
+  createdAt    DateTime @default(now())
+}
+
+model CustomQuote {
+  id        String   @id @default(cuid())
+  orderId   String   @unique
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  reason    String
+  amount    Decimal? @db.Decimal(10, 2)
+  note      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Payment {
+  id        String   @id @default(cuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  amount    Decimal  @db.Decimal(10, 2)
+  method    String   @default("offline")
+  note      String?
+  paidAt    DateTime @default(now())
+  createdAt DateTime @default(now())
+}
+
+model Shipment {
+  id          String   @id @default(cuid())
+  orderId     String
+  order       Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  carrier     String
+  trackingNo  String
+  shippedAt   DateTime @default(now())
+  createdAt   DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  title     String
+  body      String
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actor     User?    @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action    String
+  target    String
+  metadata  Json
+  createdAt DateTime @default(now())
+}

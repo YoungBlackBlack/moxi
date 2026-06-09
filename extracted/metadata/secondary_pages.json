@@ -1,0 +1,232 @@
+[
+  {
+    "index": 1,
+    "url": "https://docs.qq.com/doc/DQkJIWUVOcGFDb2Rv",
+    "kind": "doc",
+    "title": "定制须知&售后条款",
+    "finalUrl": "https://docs.qq.com/doc/DQkJIWUVOcGFDb2Rv",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/01_doc_DQkJIWUVOcGFDb2Rv",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 79,
+        "elapsedMs": 9.951999999990221,
+        "failedCount": 0,
+        "requestedCount": 79
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/db71b45e-eb9e-445a-90ef-c619de5994f5",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/db71b45e-eb9e-445a-90ef-c619de5994f5/manifest.json"
+    },
+    "visibleTextLength": 200,
+    "imgCount": 10,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/01_doc_DQkJIWUVOcGFDb2Rv/assets",
+    "local_assets_count": 80
+  },
+  {
+    "index": 2,
+    "url": "https://docs.qq.com/sheet/DSWtOY0h5cEF4Ym5Z?tab=bh0hhn",
+    "kind": "sheet",
+    "title": "饼饼发货单号表",
+    "finalUrl": "https://docs.qq.com/sheet/DSWtOY0h5cEF4Ym5Z?tab=bh0hhn",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/02_sheet_DSWtOY0h5cEF4Ym5Z_bh0hhn",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 4,
+        "elapsedMs": 159.85720800000126,
+        "failedCount": 2,
+        "requestedCount": 6
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/ba0147b2-4944-4640-8b18-13d57935949d",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/ba0147b2-4944-4640-8b18-13d57935949d/manifest.json"
+    },
+    "visibleTextLength": 316,
+    "imgCount": 1,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/02_sheet_DSWtOY0h5cEF4Ym5Z_bh0hhn/assets",
+    "local_assets_count": 5
+  },
+  {
+    "index": 3,
+    "url": "https://docs.qq.com/sheet/DSWF4b3dOcUJ2cVVm?tab=fbhqzh",
+    "kind": "sheet",
+    "title": "吧唧白墨",
+    "finalUrl": "https://docs.qq.com/sheet/DSWF4b3dOcUJ2cVVm?tab=fbhqzh",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/03_sheet_DSWF4b3dOcUJ2cVVm_fbhqzh",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 22,
+        "elapsedMs": 299.81004200002644,
+        "failedCount": 4,
+        "requestedCount": 26
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/4516d337-d97b-412e-af58-0a589a64b271",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/4516d337-d97b-412e-af58-0a589a64b271/manifest.json"
+    },
+    "visibleTextLength": 294,
+    "imgCount": 1,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/03_sheet_DSWF4b3dOcUJ2cVVm_fbhqzh/assets",
+    "local_assets_count": 23
+  },
+  {
+    "index": 4,
+    "url": "https://docs.qq.com/sheet/DQmNic0Vzb3ZKeXZX?tab=BB08J2",
+    "kind": "sheet",
+    "title": "车况表",
+    "finalUrl": "https://docs.qq.com/sheet/DQmNic0Vzb3ZKeXZX?tab=BB08J2",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/04_sheet_DQmNic0Vzb3ZKeXZX_BB08J2",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 2,
+        "elapsedMs": 220.14958299999125,
+        "failedCount": 4,
+        "requestedCount": 6
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/e7f0c2b6-3f7c-4cbb-862e-8581fb669aa7",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/e7f0c2b6-3f7c-4cbb-862e-8581fb669aa7/manifest.json"
+    },
+    "visibleTextLength": 303,
+    "imgCount": 1,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/04_sheet_DQmNic0Vzb3ZKeXZX_BB08J2/assets",
+    "local_assets_count": 3
+  },
+  {
+    "index": 5,
+    "url": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2",
+    "kind": "sheet",
+    "title": "闪底图册",
+    "finalUrl": "https://docs.qq.com/sheet/DSUp3ZEFJR0dLYWhV?tab=BB08J2",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/05_sheet_DSUp3ZEFJR0dLYWhV_BB08J2",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 15,
+        "elapsedMs": 358.48991599999135,
+        "failedCount": 5,
+        "requestedCount": 20
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/0ae53ba6-3dde-4648-acc7-b464c4274181",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/0ae53ba6-3dde-4648-acc7-b464c4274181/manifest.json"
+    },
+    "visibleTextLength": 278,
+    "imgCount": 1,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/05_sheet_DSUp3ZEFJR0dLYWhV_BB08J2/assets",
+    "local_assets_count": 16
+  },
+  {
+    "index": 6,
+    "url": "https://docs.qq.com/doc/DQm5GTWVhTG5jV1BP",
+    "kind": "doc",
+    "title": "吧唧工艺文件规范",
+    "finalUrl": "https://docs.qq.com/doc/DQm5GTWVhTG5jV1BP",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/06_doc_DQm5GTWVhTG5jV1BP",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 77,
+        "elapsedMs": 86.94712500000605,
+        "failedCount": 1,
+        "requestedCount": 78
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/7b998189-ac1e-40fc-b248-1d1b84844453",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/7b998189-ac1e-40fc-b248-1d1b84844453/manifest.json"
+    },
+    "visibleTextLength": 169,
+    "imgCount": 15,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/06_doc_DQm5GTWVhTG5jV1BP/assets",
+    "local_assets_count": 78
+  },
+  {
+    "index": 7,
+    "url": "https://docs.qq.com/sheet/DSWFTTktzZXdkUVRj?tab=BB08J2",
+    "kind": "sheet",
+    "title": "饼饼定制冷烫膜色号",
+    "finalUrl": "https://docs.qq.com/sheet/DSWFTTktzZXdkUVRj?tab=BB08J2",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/07_sheet_DSWFTTktzZXdkUVRj_BB08J2",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 19,
+        "elapsedMs": 315.4048339999863,
+        "failedCount": 4,
+        "requestedCount": 23
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/d8bbc47e-6217-46f5-b9af-85b1ac0d2abe",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/d8bbc47e-6217-46f5-b9af-85b1ac0d2abe/manifest.json"
+    },
+    "visibleTextLength": 279,
+    "imgCount": 1,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/07_sheet_DSWFTTktzZXdkUVRj_BB08J2/assets",
+    "local_assets_count": 20
+  },
+  {
+    "index": 8,
+    "url": "https://docs.qq.com/sheet/DSWxPUmhPaURLZmRt?tab=BB08J2",
+    "kind": "sheet",
+    "title": "云母板常备色号",
+    "finalUrl": "https://docs.qq.com/sheet/DSWxPUmhPaURLZmRt?tab=BB08J2",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/08_sheet_DSWxPUmhPaURLZmRt_BB08J2",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 7,
+        "elapsedMs": 214.1248749999795,
+        "failedCount": 4,
+        "requestedCount": 11
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/3f6f625a-4f7d-45a1-a2b5-0c3f94117b6f",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/3f6f625a-4f7d-45a1-a2b5-0c3f94117b6f/manifest.json"
+    },
+    "visibleTextLength": 277,
+    "imgCount": 1,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/08_sheet_DSWxPUmhPaURLZmRt_BB08J2/assets",
+    "local_assets_count": 8
+  },
+  {
+    "index": 9,
+    "url": "https://docs.qq.com/doc/DQk1oc2FWbUNCZmZs",
+    "kind": "doc",
+    "title": "烫色亚克力工艺文件规范",
+    "finalUrl": "https://docs.qq.com/doc/DQk1oc2FWbUNCZmZs",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/09_doc_DQk1oc2FWbUNCZmZs",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 77,
+        "elapsedMs": 8.757625000027474,
+        "failedCount": 0,
+        "requestedCount": 77
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/5023582f-4a57-493a-99b9-f41bdbca3771",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/5023582f-4a57-493a-99b9-f41bdbca3771/manifest.json"
+    },
+    "visibleTextLength": 172,
+    "imgCount": 14,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/09_doc_DQk1oc2FWbUNCZmZs/assets",
+    "local_assets_count": 78
+  },
+  {
+    "index": 10,
+    "url": "https://docs.qq.com/doc/DQkVUU05qZGNxeHdB",
+    "kind": "doc",
+    "title": "透卡工艺文件规范",
+    "finalUrl": "https://docs.qq.com/doc/DQkVUU05qZGNxeHdB",
+    "dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/10_doc_DQkVUU05qZGNxeHdB",
+    "assetInfo": {
+      "summary": {
+        "downloadedCount": 77,
+        "elapsedMs": 9.844959000009112,
+        "failedCount": 0,
+        "requestedCount": 77
+      },
+      "directoryPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/9986f20b-30ae-44fe-9f90-e35b11963b61",
+      "manifestPath": "/var/folders/55/8mnc0v3j71j3vzlm5n6lxr_m0000gn/T/browser-use/assets/9986f20b-30ae-44fe-9f90-e35b11963b61/manifest.json"
+    },
+    "visibleTextLength": 169,
+    "imgCount": 14,
+    "linkCount": 0,
+    "local_assets_dir": "/Users/youngzhou/Documents/moxi/extracted/secondary_pages/10_doc_DQkVUU05qZGNxeHdB/assets",
+    "local_assets_count": 78
+  }
+]

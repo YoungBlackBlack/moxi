@@ -1,0 +1,21 @@
+node_modules
+.next
+.vercel
+dist
+coverage
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+
+# Local extraction artifacts are useful as source evidence, but too heavy for
+# the Vercel deployment package. Keep compact CSV/metadata files tracked.
+image_library.html
+source/
+extracted/images/
+extracted/media_library/
+extracted/ocr/
+extracted/secondary_pages/
+extracted/tab_click_screenshots/
