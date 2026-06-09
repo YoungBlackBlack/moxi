@@ -13,6 +13,11 @@ export async function POST(request: Request) {
   try {
     const result = await importPreparedCatalogAssets({ prisma });
     return NextResponse.json({ ok: true, result });
+  } catch (error) {
+    return NextResponse.json(
+      { ok: false, error: error instanceof Error ? error.message : "unknown error" },
+      { status: 500 }
+    );
   } finally {
     await prisma.$disconnect();
   }
