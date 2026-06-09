@@ -187,53 +187,54 @@ async function main() {
       }))
       .filter((row) => row.values.length > 0);
 
-    for (const row of usefulRows.slice(0, 12)) {
-      const text = row.values.join(" / ");
-      if (/文件名|邮件名|交稿|邮箱|CMYK|RGB|dpi|DPI|白墨|烫色|出血|售后/.test(text)) {
-        await prisma.submissionRule.create({
-          data: {
-            categoryId: category.id,
-            title: `第 ${row.rowIndex + 1} 行交稿规则`,
-            body: text,
-            email: text.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)?.[0],
-            filePattern: text.includes("文件名") || text.includes("邮件名") ? text : null,
-            raw: row
-          }
-        });
-      }
+    const submissionRules = usefulRows
+      .slice(0, 12)
+      .map((row) => ({ row, text: row.values.join(" / ") }))
+      .filter(({ text }) => /文件名|邮件名|交稿|邮箱|CMYK|RGB|dpi|DPI|白墨|烫色|出血|售后/.test(text))
+      .map(({ row, text }) => ({
+        categoryId: category.id,
+        title: `第 ${row.rowIndex + 1} 行交稿规则`,
+        body: text,
+        email: text.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)?.[0],
+        filePattern: text.includes("文件名") || text.includes("邮件名") ? text : null,
+        raw: row
+      }));
+    if (submissionRules.length) {
+      await prisma.submissionRule.createMany({ data: submissionRules });
     }
 
     const priceRows = usefulRows.filter((row) => row.values.some((value) => /\d/.test(value))).slice(0, 80);
-    for (const row of priceRows) {
+    const priceRules = priceRows.map((row) => {
       const [label, ...rest] = row.values;
       const priceCandidate = rest.map(numeric).find((value) => value != null);
-      await prisma.priceRule.create({
-        data: {
-          categoryId: category.id,
-          label: label || `第 ${row.rowIndex + 1} 行报价`,
-          size: /\d/.test(label) ? label : null,
-          unitPrice: priceCandidate ? new Prisma.Decimal(priceCandidate) : null,
-          rawRow: row
-        }
-      });
+      return {
+        categoryId: category.id,
+        label: label || `第 ${row.rowIndex + 1} 行报价`,
+        size: /\d/.test(label) ? label : null,
+        unitPrice: priceCandidate ? new Prisma.Decimal(priceCandidate) : null,
+        rawRow: row
+      };
+    });
+    if (priceRules.length) {
+      await prisma.priceRule.createMany({ data: priceRules });
     }
   }
 
-  for (const page of secondaryPages) {
-    await prisma.externalReference.create({
-      data: {
+  if (secondaryPages.length) {
+    await prisma.externalReference.createMany({
+      data: secondaryPages.map((page) => ({
         title: page.title,
         url: page.url,
         kind: page.kind,
         localDir: path.relative(root, page.dir),
         assetCount: page.local_assets_count ?? 0
-      }
+      }))
     });
   }
 
-  for (const item of media) {
-    await prisma.mediaAsset.create({
-      data: {
+  if (media.length) {
+    await prisma.mediaAsset.createMany({
+      data: media.map((item) => ({
         kind: mapAssetKind(item.kind),
         label: item.label,
         source: item.source,
@@ -241,7 +242,7 @@ async function main() {
         size: item.size,
         ocrText: item.ocr_text ?? item.ocrText,
         tags: [item.kind]
-      }
+      }))
     });
   }
 
