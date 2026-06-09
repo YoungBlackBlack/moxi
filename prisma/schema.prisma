@@ -102,16 +102,22 @@ model SubmissionRule {
 }
 
 model MediaAsset {
-  id        String    @id @default(cuid())
-  kind      AssetKind
-  label     String
-  source    String
-  filePath  String
-  size      Int
-  ocrText   String?
-  tags      String[]  @default([])
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  id             String    @id @default(cuid())
+  kind           AssetKind
+  label          String
+  source         String
+  filePath       String
+  storagePath    String?
+  publicUrl      String?
+  thumbnailUrl   String?
+  size           Int
+  compressedSize Int?
+  width          Int?
+  height         Int?
+  ocrText        String?
+  tags           String[]  @default([])
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
 }
 
 model ExternalReference {

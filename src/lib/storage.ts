@@ -1,6 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 
 export const orderFileBucket = process.env.SUPABASE_STORAGE_BUCKET ?? "order-files";
+export const catalogAssetBucket = process.env.SUPABASE_CATALOG_BUCKET ?? "catalog-assets";
 
 export function getSupabaseAdmin() {
   const url = process.env.SUPABASE_URL ?? process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -56,4 +57,26 @@ export async function uploadOrderFile(input: {
     key,
     url: signed.data?.signedUrl ?? key
   };
+}
+
+export async function ensurePublicCatalogBucket() {
+  const supabase = getSupabaseAdmin();
+  if (!supabase) {
+    throw new Error("缺少 SUPABASE_SERVICE_ROLE_KEY，无法上传公开素材");
+  }
+  const bucket = await supabase.storage.getBucket(catalogAssetBucket);
+  if (bucket.error) {
+    const created = await supabase.storage.createBucket(catalogAssetBucket, {
+      public: true,
+      fileSizeLimit: null
+    });
+    if (created.error) throw new Error(created.error.message);
+  } else {
+    const updated = await supabase.storage.updateBucket(catalogAssetBucket, {
+      public: true,
+      fileSizeLimit: null
+    });
+    if (updated.error) throw new Error(updated.error.message);
+  }
+  return supabase;
 }
