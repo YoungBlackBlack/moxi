@@ -16,6 +16,7 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
+    "assets:prepare": "tsx scripts/prepare-catalog-assets.ts",
     "assets:import": "tsx scripts/import-catalog-assets.ts"
   },
   "dependencies": {
