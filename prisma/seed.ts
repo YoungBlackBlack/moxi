@@ -145,7 +145,9 @@ function numeric(value: string | undefined) {
   const cleaned = value.replace(/[^\d.]/g, "");
   if (!cleaned) return null;
   const parsed = Number(cleaned);
-  return Number.isFinite(parsed) ? parsed : null;
+  if (!Number.isFinite(parsed)) return null;
+  if (parsed <= 0 || parsed >= 1000000) return null;
+  return parsed;
 }
 
 async function main() {
@@ -204,7 +206,7 @@ async function main() {
     const priceRows = usefulRows.filter((row) => row.values.some((value) => /\d/.test(value))).slice(0, 80);
     for (const row of priceRows) {
       const [label, ...rest] = row.values;
-      const priceCandidate = rest.map(numeric).find((value) => value != null && value > 0);
+      const priceCandidate = rest.map(numeric).find((value) => value != null);
       await prisma.priceRule.create({
         data: {
           categoryId: category.id,
