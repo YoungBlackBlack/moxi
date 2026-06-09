@@ -14,9 +14,9 @@ export type MediaLibraryItem = {
 export const catalogDir = "public/catalog";
 
 export function readMediaLibrary(root = process.cwd()) {
-  return JSON.parse(
-    fs.readFileSync(path.join(root, "extracted/metadata/media_library.json"), "utf8")
-  ) as MediaLibraryItem[];
+  const source = path.join(root, "extracted/metadata/media_library.json");
+  const bundled = path.join(root, "public/catalog-manifest.json");
+  return JSON.parse(fs.readFileSync(fs.existsSync(source) ? source : bundled, "utf8")) as MediaLibraryItem[];
 }
 
 export function catalogFileName(input: string) {

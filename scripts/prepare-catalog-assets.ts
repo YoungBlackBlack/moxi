@@ -9,6 +9,7 @@ const outputDir = path.join(root, catalogDir);
 async function main() {
   fs.mkdirSync(outputDir, { recursive: true });
   const media = readMediaLibrary(root);
+  fs.writeFileSync(path.join(root, "public/catalog-manifest.json"), JSON.stringify(media, null, 2));
   let compressed = 0;
   for (const item of media) {
     const inputPath = path.join(root, item.file);
