@@ -28,11 +28,16 @@ export async function uploadOrderFile(input: {
   if (bucket.error) {
     const created = await supabase.storage.createBucket(orderFileBucket, {
       public: false,
-      fileSizeLimit: 1024 * 1024 * 1024
+      fileSizeLimit: "1073741824"
     });
     if (created.error) {
       throw new Error(created.error.message);
     }
+  } else {
+    await supabase.storage.updateBucket(orderFileBucket, {
+      public: false,
+      fileSizeLimit: "1073741824"
+    });
   }
   const safeName = input.fileName.replace(/[^\w.\-\u4e00-\u9fa5]/g, "_");
   const key = `${input.orderId}/${Date.now()}-${safeName}`;
